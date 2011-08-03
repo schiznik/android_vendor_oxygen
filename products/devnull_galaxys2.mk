@@ -19,4 +19,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=GT-I9100 BUILD_ID=GRJ22 BUILD_DISPL
 
 # Add additional mounts
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.additionalmounts=/mnt/sdcard/external_sd
+    ro.additionalmounts=/mnt/emmc
