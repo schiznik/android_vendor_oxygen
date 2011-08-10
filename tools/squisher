@@ -105,7 +105,6 @@ system/xbin/dhdutil
 system/xbin/directiotest
 system/xbin/hciconfig
 system/xbin/hcidump
-system/xbin/hcitool
 system/xbin/hstest
 system/xbin/l2ping
 system/xbin/l2test
@@ -175,11 +174,11 @@ rm -rf $REPACK/ota/recovery
 DATE=`date +%d%m%y-%H%M`
 
 # Determine what to name the new signed package
-if [ ! -z "$DEVNULL_RELEASE" ]; then
-	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*DevNull-//p' $REPACK/ota/system/build.prop`
-	OUTFILE=$OUT/update-devnull-$MODVERSION-signed.zip
+if [ ! -z "$OXYGEN_RELEASE" ]; then
+        MODVERSION=`sed -n -e'/ro\.modversion/s/^.*Oxygen-//p' $REPACK/ota/system/build.prop`
+        OUTFILE=$OUT/update-oxygen-$MODVERSION-signed.zip
 else
-	OUTFILE=$OUT/update-devnull-test-$DATE-signed.zip
+        OUTFILE=$OUT/update-oxygen-test-$DATE-signed.zip
 fi
 
 # Pack it up and sign
