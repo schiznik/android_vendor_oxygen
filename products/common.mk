@@ -50,7 +50,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.adb.notify=0
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/devnull/overlay
+    vendor/devnull/overlay/common
 
 PRODUCT_COPY_FILES += \
     vendor/devnull/prebuilt/etc/hosts:system/etc/hosts \
