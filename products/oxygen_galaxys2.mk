@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for galaxys2.
 $(call inherit-product, device/samsung/galaxys2/full_galaxys2.mk)
 
-# Inherit some common devnull stuff.
-$(call inherit-product, vendor/devnull/products/common.mk)
+# Inherit some common oxygen stuff.
+$(call inherit-product, vendor/oxygen/products/common.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/devnull/products/gsm.mk)
+$(call inherit-product, vendor/oxygen/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := devnull_galaxys2
+PRODUCT_NAME := oxygen_galaxys2
 PRODUCT_BRAND := samsung
 PRODUCT_DEVICE := galaxys2
 PRODUCT_MODEL := GT-I9100

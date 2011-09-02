@@ -50,14 +50,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.adb.notify=0
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/devnull/overlay/common
+    vendor/oxygen/overlay/common
 
 PRODUCT_COPY_FILES += \
-    vendor/devnull/prebuilt/etc/hosts:system/etc/hosts \
-    vendor/devnull/prebuilt/etc/init.d/99complete:system/etc/init.d/99complete
+    vendor/oxygen/prebuilt/etc/hosts:system/etc/hosts \
+    vendor/oxygen/prebuilt/etc/init.d/99complete:system/etc/init.d/99complete
 
 # Google Apps
 $(call inherit-product, vendor/google/gapps.mk)
 
 # T-Mobile Theme Engine
-$(call inherit-product, vendor/devnull/products/themes.mk)
+$(call inherit-product, vendor/oxygen/products/themes.mk)

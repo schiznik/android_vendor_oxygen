@@ -1,16 +1,16 @@
 # Inherit AOSP device configuration for passion.
 $(call inherit-product, device/htc/passion/full_passion.mk)
 
-# Inherit some common devnull stuff.
-$(call inherit-product, vendor/devnull/products/common.mk)
+# Inherit some common oxygen stuff.
+$(call inherit-product, vendor/oxygen/products/common.mk)
 
 # Include GSM stuff
-$(call inherit-product, vendor/devnull/products/gsm.mk)
+$(call inherit-product, vendor/oxygen/products/gsm.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := devnull_passion
+PRODUCT_NAME := oxygen_passion
 PRODUCT_BRAND := google
 PRODUCT_DEVICE := passion
 PRODUCT_MODEL := Nexus One
@@ -24,7 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # A2SD support
 PRODUCT_COPY_FILES += \
-    vendor/devnull/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
+    vendor/oxygen/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
 
 # FM packages
 PRODUCT_PACKAGES += \

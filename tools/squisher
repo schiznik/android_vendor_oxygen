@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Squish a devnull otapackage for distribution
+# Squish a oxygen otapackage for distribution
 # original script by cyanogen
 #
 
@@ -31,7 +31,7 @@ if [ ! -f "$OTAPACKAGE" ]; then
 	exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/vendor/devnull/tools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/oxygen/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 

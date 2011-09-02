@@ -4,4 +4,4 @@ PRODUCT_PACKAGES += \
 
 # GSM apn list
 PRODUCT_COPY_FILES += \
-    vendor/devnull/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/oxygen/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
