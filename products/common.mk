@@ -58,6 +58,3 @@ PRODUCT_COPY_FILES += \
 
 # Google Apps
 $(call inherit-product, vendor/google/gapps.mk)
-
-# T-Mobile Theme Engine
-$(call inherit-product, vendor/oxygen/products/themes.mk)
