@@ -1,38 +1,22 @@
-#
-# Set ro.modversion
-#
-ifdef OXYGEN_RELEASE
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=Oxygen-2.2.3
-else
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=Oxygen-TEST
-endif
+$(call inherit-product, vendor/google/gapps.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += ro.rommanager.developerid=adamg
 
-# Used by BusyBox
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
 ifneq ($(BOARD_KERNEL_MODULES_DIR),)
-KERNEL_MODULES_DIR:=$(BOARD_KERNEL_MODULES_DIR)
+    KERNEL_MODULES_DIR := $(BOARD_KERNEL_MODULES_DIR)
 else
-KERNEL_MODULES_DIR:=/system/lib/modules
+    KERNEL_MODULES_DIR := /system/lib/modules
 endif
 
-# Tiny toolbox
-TINY_TOOLBOX:=true
+TINY_TOOLBOX := true
 
-# Build packages
 PRODUCT_PACKAGES += \
     CMScreenshot \
-    Superuser \
-    Torch
-
-# Build binaries
-PRODUCT_PACKAGES += \
     screenshot \
-    su
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+    su \
+    Superuser
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Sceptrum.ogg \
@@ -49,13 +33,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     persist.adb.notify=0
 
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/oxygen/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/oxygen/overlay/common
 
 PRODUCT_COPY_FILES += \
     vendor/oxygen/prebuilt/bin/sysinit:system/bin/sysinit \
     vendor/oxygen/prebuilt/etc/hosts:system/etc/hosts \
     vendor/oxygen/prebuilt/etc/init.d/99complete:system/etc/init.d/99complete
-
-# Google Apps
-$(call inherit-product, vendor/google/gapps.mk)
