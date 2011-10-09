@@ -22,7 +22,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += vendor/oxygen/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
 
 ifdef OXYGEN_RELEASE
-    PRODUCT_PROPERTY_OVERRIDES += ro.modversion=Oxygen-2.3-N1
+    PRODUCT_PROPERTY_OVERRIDES += ro.modversion=Oxygen-2.3.1-N1
 else
     PRODUCT_PROPERTY_OVERRIDES += ro.modversion=Oxygen-2-$(shell date +%m%d%Y)-NIGHTLY-N1
 endif
