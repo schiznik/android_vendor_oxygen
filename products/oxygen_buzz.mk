@@ -12,7 +12,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=buzz BUILD_ID=GRK39F BUILD_FINGERPR
 PRODUCT_PACKAGES += Torch
 
 PRODUCT_COPY_FILES += \
-    vendor/oxygen/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd
+    vendor/oxygen/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd \
+    vendor/oxygen/misc/ZeamLauncher.apk:system/app/ZeamLauncher.apk
+
 
 # Add LDPI Assets
 PRODUCT_LOCALES += ldpi mdpi
