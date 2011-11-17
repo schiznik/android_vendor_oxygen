@@ -1,7 +1,5 @@
 $(call inherit-product, vendor/google/gapps.mk)
 
-PRODUCT_PROPERTY_OVERRIDES += ro.rommanager.developerid=adamg
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifneq ($(BOARD_KERNEL_MODULES_DIR),)
