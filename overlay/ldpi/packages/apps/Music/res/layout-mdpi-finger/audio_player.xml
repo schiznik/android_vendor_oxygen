@@ -45,17 +45,17 @@
            <ImageButton android:id="@+id/curplaylist"
                 android:src="@drawable/ic_mp_current_playlist_btn"
                 android:layout_width="85dip"
-                android:layout_height="54dip"
+                android:layout_height="48dip"
                 android:layout_marginTop="14dip" />
 
            <ImageButton android:id="@+id/shuffle"
                 android:layout_width="85dip"
-                android:layout_height="54dip"
+                android:layout_height="48dip"
                 android:layout_marginTop="20dip" />
 
            <ImageButton android:id="@+id/repeat"
                 android:layout_width="85dip"
-                android:layout_height="54dip"
+                android:layout_height="48dip"
                 android:layout_marginTop="20dip" />
 
         </LinearLayout>
@@ -78,7 +78,7 @@
             android:src="@drawable/ic_mp_artist_playback" />
 
         <TextView android:id="@+id/artistname"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:singleLine="true"
             android:ellipsize="end"
             android:textStyle="bold"
